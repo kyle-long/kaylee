@@ -3,7 +3,7 @@
     "description": "The main object in this config. It defines where to find files, where to copy them to and how.",
     "allOf": [
         {
-            "$ref": "./file-access"
+            "$ref": "./file-access.json"
         },
         {
             "type": "object",
@@ -17,13 +17,13 @@
                             "type": "array",
                             "minItems": 1,
                             "items": {
-                                "$ref": "./destination"
+                                "$ref": "./destination.json"
                             }
                         }
                     ]
                 }
-            }
+            },
+            "required": []
         }
-    ],
-    "required": []
+    ]
 }

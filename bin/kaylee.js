@@ -22,6 +22,5 @@ container.callAsync((config) => {
 }).then(() => {
     console.log("success");
 }, (err) => {
-    console.log("bad");
-    console.log(err);
+    console.log(err.message);
 });
