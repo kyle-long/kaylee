@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 "use strict";
 
-var args, container, helpMessage, neodoc;
+var args, container, helpMessage, logger, logLevel, neodoc;
 
-container = require("../lib/container")();
 neodoc = require("neodoc");
 
 helpMessage = `
@@ -12,15 +11,26 @@ helpMessage = `
 
     Arguments:
         <configPath>    The path to the config file you wish to use when executing kaylee.
+
+    Options:
+        -v, --verbose   Turns on debug logging for troubleshooting.
 `;
 
 args = neodoc.run(helpMessage);
+logLevel = "info";
+
+if (args["--verbose"] === true) {
+    logLevel = "debug";
+}
+
+container = require("../lib/container")(logLevel);
 container.register("configPath", args["<configPath>"]);
+logger = container.resolve("logger");
 
 container.callAsync((config) => {
-    console.log(config);
+    logger.info(config);
 }).then(() => {
-    console.log("success");
+    logger.info("success");
 }, (err) => {
-    console.log(err.message);
+    logger.info(err.message);
 });
