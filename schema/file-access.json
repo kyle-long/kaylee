@@ -1,0 +1,21 @@
+{
+    "description": "This object describes how to access a file. This could either be a destination or a source based on where it is used.",
+    "type": "object",
+    "properties": {
+        "path": {
+            "description": "The path to a file (remember if this is a destination it does not have to exist yet. IMPORTANT NOTE: I base the protocol off of the prefix so make sure to specify it properly. For example, for ftp use 'ftp://' then the path.",
+            "type": "string"
+        },
+        "username": {
+            "description": "The username to use for accessing this location. This would make sense when accessing an FTP site but not when copying a file locally.",
+            "type": "string"
+        },
+        "password": {
+            "description": "The password to use for accessing this location. This would make sense when accessing an FTP site but not when copying a file locally.",
+            "type": "string"
+        }
+    },
+    "required": [
+        "path"
+    ]
+}

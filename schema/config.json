@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "defaultDecrypt": {
+            "$ref": "./decrypt.json"
+        },
+        "source": {
+            "oneOf": [
+                {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "$ref": "./source.json"
+                    }
+                },
+                {
+                    "$ref": "./source.json"
+                }
+            ]
+        }
+    },
+    "required": [
+        "source"
+    ]
+}

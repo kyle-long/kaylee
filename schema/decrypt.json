@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "secretPath": {
+            "description": "The local file path to a GPG secret key. This is used to decrpyt things.",
+            "type": "string"
+        },
+        "password": {
+            "description": "This is the passphrase associated with the GPG secret key. It's used to decrypt the secret key itself. If one is not used, this can be left blank.",
+            "type": "string"
+        }
+    },
+    "required": [
+        "secretPath"
+    ]
+}

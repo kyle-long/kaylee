@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "./file-access.json"
+        },
+        {
+            "type": "object",
+            "properties": {
+                "decrypt": {
+                    "oneOf": [
+                        {
+                            "description": "If set to true, it will use the defaultDecrypt property from the top level of the config",
+                            "type": "boolean"
+                        },
+                        {
+                            "$ref": "./decrypt.json"
+                        }
+                    ]
+
+                }
+            }
+        }
+    ]
+}

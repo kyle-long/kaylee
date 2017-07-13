@@ -19,15 +19,15 @@ The goal of Kaylee is
 Example Config File (yaml)
 --------------------------
 
+    # This is used for a desintation where decrypt is equal to true.
+    defaultDecrypt:
+        secretPath: /root/secret-key
+        password: pass1
     source:
         -
             path: ftp://blah
             username: usr1
             password: pass1
-            # This is used for a desintation where decrypt is equal to true.
-            defaultDecrypt:
-                secretPath: /root/secret-key
-                password: pass1
             remove: true
             destination:
                 -
