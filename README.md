@@ -16,7 +16,7 @@ The goal of Kaylee is
 * "Preflight file" created after the destinations are copied.
     * Get a page count of the PDF file.
     * Create a text file with the filename and the number of pages. We will call this `PREFLIGHT_FILE`.
-        * Filename Format: `securian-b29-<timestamp(mm-dd-Y)>.txt`
+        * Filename Format: `johndalar-b29-<timestamp(mm-dd-Y)>.txt`
     * Copy `PREFLIGHT_FILE` to "multiple directories" that should be configured.
 
 Example Config File (yaml)
@@ -32,7 +32,7 @@ Example Config File (yaml)
             remove: true
             destination:
                 -
-                    path: \\dp-fs\cc-laser\securian-b29-<timestamp(mm-dd-Y)>
+                    path: \\fun\laser\johndalar-b29-<timestamp(mm-dd-Y)>
                     decrypt: true
                 -
                     path: /lasr/drive/lol/encrypted
@@ -43,7 +43,7 @@ Example Config File (yaml)
                         password: other-password
             preflight:
                 -
-                    path: \\sw-pdc\cc-maintainlist\# preflights\linda\securian-b29-<timestamp(mm-dd-Y-hh)>
+                    path: \\something\ll-something\# preflights\linda\johndalar-b29-<timestamp(mm-dd-Y-hh)>
 
 Additional Notes
 ----------------
