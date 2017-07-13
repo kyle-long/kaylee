@@ -27,10 +27,10 @@ container = require("../lib/container")(logLevel);
 container.register("configPath", args["<configPath>"]);
 logger = container.resolve("logger");
 
-container.callAsync((config) => {
-    logger.info(config);
+container.callAsync((manager) => {
+    return manager.run();
 }).then(() => {
     logger.info("success");
 }, (err) => {
-    logger.info(err.message);
+    logger.error(err);
 });
