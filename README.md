@@ -19,25 +19,25 @@ The goal of Kaylee is
 Example Config File (yaml)
 --------------------------
 
-	source:
-		-
-			path: ftp://blah
-			username: usr1
-			password: pass1
-			decrypt:
-				secretPath: /root/secret-key
-				password: pass1
-			remove: true
-			consumed:
-				-
-					path: ftp://blah/consumed
-					username: usr1
-					password: pass1
-			destination:
-				-
-					path: /lasr/drive
-					username: usr1
-					password: pass1
+    source:
+        -
+            path: ftp://blah
+            username: usr1
+            password: pass1
+            decrypt:
+                secretPath: /root/secret-key
+                password: pass1
+            remove: true
+            consumed:
+                -
+                    path: ftp://blah/consumed
+                    username: usr1
+                    password: pass1
+            destination:
+                -
+                    path: /lasr/drive
+                    username: usr1
+                    password: pass1
 
 Error Scenarios
 ---------------
