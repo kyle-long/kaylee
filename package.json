@@ -1,0 +1,34 @@
+{
+    "name": "kaylee",
+    "version": "1.0.0",
+    "description": "A bit of a question mark. Ask Adam.",
+    "scripts": {
+        "test": "script/test",
+        "watch": "script/watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/not-nexus/shelf-lib-js.git"
+    },
+    "author": "Kyle Long",
+    "contributors": [
+        {
+            "name": "Kyle Long",
+            "email": "uilwen@gmail.com"
+        },
+        {
+            "name": "Adam Michalicek",
+            "email": "adam.michalicek26@gmail.com"
+        }
+    ],
+    "devDependencies": {
+        "eslint": "^2.10.2",
+        "jasmine": "~2.5.2",
+        "jasmine-test-helpers": "^1.1.0"
+    },
+    "dependencies": {
+        "dizzy": "^2.2.3",
+        "dizzy-promisify-bluebird": "^1.0.3",
+        "openpgp": "^2.5.4"
+    }
+}
