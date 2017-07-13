@@ -11,9 +11,9 @@ The goal of Kaylee is
 * Decrypt the file. We need a private key path configured.
     * WE ALSO NEED THE PASSPHRASE TO DECRYPT. SCARY
 * Get a page count of the PDF file.
-* Create a text file with the filename and the number of pages. We will call this preflignt.txt.
-    * Filename Formate: securian-b29-<timestamp>.txt
-* Copy preflight.txt to "multiple directories" that should be configured.
+* Create a text file with the filename and the number of pages. We will call this `preflignt.txt`.
+    * Filename Format: `securian-b29-<timestamp>.txt`
+* Copy `preflight.txt` to "multiple directories" that should be configured.
 * Copy the decrypted PDF to a directory on the laser share. (A destination which is configurable).
 
 Example Config File (yaml)
