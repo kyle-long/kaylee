@@ -24,20 +24,32 @@ Example Config File (yaml)
             path: ftp://blah
             username: usr1
             password: pass1
-            decrypt:
+            # This is used for a desintation where decrypt is equal to true.
+            defaultDecrypt:
                 secretPath: /root/secret-key
                 password: pass1
             remove: true
-            consumed:
+            destination:
+                -
+                    path: /lasr/drive
+                    # I need a username and password to copy to the lasr drive?
+                    # How does this work?
+                    username: usr1
+                    password: pass1
+                    decrypt: true
+                -
+                    path: /lasr/drive2
+                    username: usr1
+                    password: pass1
+                    # If decrypt is just true, it will use the defaultDecrpyt at the top level.
+                    decrypt: true
                 -
                     path: ftp://blah/consumed
                     username: usr1
                     password: pass1
-            destination:
-                -
-                    path: /lasr/drive
-                    username: usr1
-                    password: pass1
+                    decrypt:
+                        secretPath: /root/other-secret-key
+                        password: pass2
 
 Error Scenarios
 ---------------
